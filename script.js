@@ -23,24 +23,11 @@ function App() {
 
   const loadButtonEl = useRef();
 
-  const getRandomPhotos = () => {
-    setState("loading");
-    axios(`${API}/photos/random`, {
-      params: {
-        count: DEFAULT_IMAGE_COUNT,
-        client_id: CLIENT_ID } }).
-
-
-    then(res => {
-      setImages(res.data);
-      if (failedToLoad) setFailedToLoad(false);
-    }).
-    catch(() => setFailedToLoad(true));
-  };
-
-  useEffect(getRandomPhotos, [failedToLoad]);
-
-  useEffect(waitForImages, [images]);
+ <!------------->
+  
+  
+  
+  
 
   const searchQuery = () => {
     if (query !== "") {
